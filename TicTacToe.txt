@@ -1,0 +1,7 @@
+Mini Project-2
+
+->Here we are going to create a Tic Tac Toe using only HTML,CSS & JS.
+->We will make this website a responsive website so that it will work properly in phone,tablet as well as computers.So this webiste will be working in any device hassle free.
+->The learning through project is the best learning.
+->Live Server is an extension.By installing this extension,whenever we will right click on the index.html then we will be getting an option for open with live server.So by clicking this option we will observe that our website will get open in our browser.We will also be able to see the title of the website.
+->If we will create a navbar in this website then we can make the users navigate in the webiste.Also our webiste will look professional if it contains a navbar.

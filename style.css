@@ -1,0 +1,158 @@
+/*we can see the CSS attributes changing dynamically if we do right click on our webpage and make changes in the inspect. */
+/*In this website there is not much role of a navbar*/
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: rgb(60, 16, 62);
+    color: white;
+    height: 65px;
+    font-size: 27px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    /*by doing this the bullet marks before the list item will get removed.*/
+}
+
+.gameContainer {
+    /*for gameContainer we will write a css to reduce its width so that it doesnt stick to the wall of the viewport.*/
+    display: flex;
+    /* margin:auto */
+    /*This is genrally used so that the targeted element comes in the centre.The margin: auto; CSS property is commonly used to horizontally center an element within its parent container.But here we have done display:flex so there is no need to do margin:auto.*/
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    position: relative;
+    /*used to make a container/HTML element a grid.*/
+    /*after giving display:grid,we will define rows and columns*/
+    grid-template-columns: repeat(3, 10vw);
+    /*here we are using vw as we want to make it responsive.*/
+    grid-template-rows: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+}
+
+.box {
+    border: 2px solid black;
+    font-size: 8vw;
+    /*using vw so as to make this website responsive.So the benifit of giving font-size in vw is that the boxtext will not come out of the box for snmaller viewport sizes also.*/
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(237, 227, 247);
+}
+
+.info {
+    font-size: 22px;
+}
+
+.gameInfo {
+    padding: 0 34px;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+/* .gameInfo h1{
+     font-size: 2rem; 
+} */
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+    /*here we are giving transition to the width property.*/
+    /* display: none; */
+}
+
+/*here we are going to write utility classes*/
+/* Utility classes in CSS are a set of predefined, reusable CSS classes that provide specific styling or functional properties to HTML elements. They are designed to simplify and expedite the process of styling elements and creating consistent layouts across a website or web application. */
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+#reset {
+    /*here we are going to style the button using the reset id. */
+    margin: 0 23px;
+    padding: 1px 18px;
+    border-radius: 6px;
+    background-color: rgb(229, 212, 245);
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 15px;
+    font-weight: bolder;
+}
+/*Animation Line*/
+.line{
+    background-color:#911d91;
+    width:0;/*here we have took the width to be 30vw as our grid size is 3 blocks of 10vw which is equal to 30vw.Here if we keep the width to be 100% then it will basically take 100% of the container in whcih it is present.initially we are taking the width to be 0vw but we are going to change the width to 20vw using JavaScript once someone wins.*/
+    height: 5px;
+    border-radius: 3px;
+    position:absolute;/*due to this the line will be positioned relative to the first nearest positioned element.so now we can move this line by using the top,bottom,left and right properties.*/
+    transition: width 1s ease-in-out;
+    /*now we will give transform property to this line.*/
+    /*transform:translate(10vw,20vw) rotate(90deg);so basically whenever someone will win we are going to add the transform property.here translate(10vw,10vw) specifies the translation made by the line in x and y axis.so we can basically move our line with the help of translate() and rotate() which means setting up the transform property.so as and when we will add the transform property and our workmwill be done of positioning the line to the correct position.*/
+}
+/* .imgbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/*Now here we will see/check the responsiveness of our web page i.e:now we will make our webiste responsive.So here we are going to apply media query to make our website responsive.*/
+/* A media query is a fundamental concept in web development and is primarily used in the context of Cascading Style Sheets (CSS) to apply different styles or layouts to a web page based on various characteristics of the user's device or viewport. Media queries allow web designers and developers to create responsive web designs that adapt to different screen sizes, resolutions, and other device-specific features. */
+/* In this example, the @media rule is used to define a media query.*/
+@media screen and (max-width:950px) {
+
+    /* CSS rules for screens with a maximum width of 768 pixels */
+    .gameContainer {
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+        /* font-family: 'Baloo Bhaina 2', cursive; */
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        /* display: grid; */
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+        font-weight: bolder;
+    }
+    .imgbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .I{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images\favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <!--navbar--><!--Here in this navbar we are not putting links in it i.e:we are creating a very basic navbar. -->
+    <nav><!--The <nav> tag in HTML is used to define a section of a webpage that contains navigation links or menus. Its primary role is to mark up and identify the portion of the webpage that provides navigation options for users to move around the site or access different sections or pages.-->
+        <ul>
+            <li>MyTicTacToe.com</li><!--here we have assumed that our tictactoe application will get hosted on a website named/domain MyTicTacToe.com--><!--Domain Name: A domain name is the specific address used to identify a website on the internet. It's the human-readable, text-based name that people type into their web browsers to access a website.-->
+        </ul>
+    </nav>
+    <!--our main game would be present in the centre so we are going to create a gameContainer and then we will write the CSS in it for creating the grid inside this container.In this game container we will make aleft side and a right side.On the left side we will have the game(i.e:the tictactoe grid) and on the right side game info.-->
+    <div class="gameContainer"><!--This container will be our whole game itself.-->
+        <div class="container"><!--Now we will make this container a grid and then we will be able to see the tictactoe grid.The grid will come inside this container.--><!--Here our container will be a grid.-->
+            <div class="line"></div>
+            <div class="box bl-0 bt-0"><span class="boxText"></span></div><!--The box text will come inside the span inside the div.box(i.e:div with class box).The box text may be either O or X,initially we are keeping X.But later on we are going to keep box text as a blank.-->
+            <div class="box bt-0"><span class="boxText"></span></div>
+            <div class="box bt-0 br-0"><span class="boxText"></span></div>
+            <div class="box bl-0"><span class="boxText"></span></div>
+            <div class="box"><span class="boxText"></span></div>
+            <div class="box br-0"><span class="boxText"></span></div>
+            <div class="box bl-0 bb-0"><span class="boxText"></span></div>
+            <div class="box bb-0"><span class="boxText"></span></div>
+            <div class="box bb-0 br-0"><span class="boxText"></span></div>
+        </div>
+        <div class="gameInfo">
+            <h1>Welcome to MyTicTacToe</h1>
+            <div class="I"><!--here it will be mentioned then whose turn is there and also is the game has been over or not.-->
+                <span class="info">Turn for X</span>
+                <button id="reset">Reset</button><!--This button will be used to reset the game.-->
+            </div>
+            <div class="imgbox"><!--It makes a big difference if we add images to our website.-->
+                <img src="" alt=""><!--we will display thisgif whenever the game gets over or something like that happens.-->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
